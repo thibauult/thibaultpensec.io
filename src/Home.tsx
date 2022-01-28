@@ -1,8 +1,8 @@
 import { PrismicRichText, useSinglePrismicDocument } from '@prismicio/react'
 import Loader from './components'
-import './App.css';
+import './Home.css';
 
-function App() {
+function Home() {
 
   const [welcome, { state }] = useSinglePrismicDocument('welcome')
 
@@ -11,10 +11,10 @@ function App() {
     <main className='App'>
       {state === 'loading' ? (<Loader/>) : 
         // @ts-ignore
-        (welcome && <PrismicRichText field={welcome.data.intro} /> ) 
+        (welcome && <PrismicRichText field={welcome.data.intro} /> )
       }
     </main>
   )
 }
 
-export default App
+export default Home

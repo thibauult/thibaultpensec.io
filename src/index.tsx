@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
-import App from './App';
+import Home from './Home';
 
 import { PrismicProvider } from '@prismicio/react'
 import client from './prismic'
@@ -10,7 +10,7 @@ import client from './prismic'
 ReactDOM.render(
   <React.StrictMode>
     <PrismicProvider client={client}>
-      <App />
+      <Home />
     </PrismicProvider>
   </React.StrictMode>,
   document.getElementById('root')
