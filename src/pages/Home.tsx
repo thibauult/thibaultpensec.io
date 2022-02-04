@@ -6,9 +6,9 @@ import {
 } from '@prismicio/react'
 import * as prismicH from "@prismicio/helpers";
 import Loader from '../components'
+import Layout from "../components/Layout";
 import NotFound from "./NotFound";
 import {useEffect} from "react";
-import Layout from "../components/Layout";
 
 function Home() {
 
@@ -56,11 +56,11 @@ function Home() {
             </Layout>
         )
     }
-    else if (homeState.state === "loading") {
-        return <Loader/>
+    else if (notFound) {
+        return <NotFound/>
     }
 
-    return <NotFound/>
+    return <Loader/>
 }
 
 export default Home

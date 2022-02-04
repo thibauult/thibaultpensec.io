@@ -1,3 +1,4 @@
+[![Build](https://github.com/tibus29/thibaultpensec.io/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/tibus29/thibaultpensec.io/actions/workflows/build.yml)
 [![Vercel](https://vercelbadge.vercel.app/api/tibus29/thibaultpensec.io)](https://vercel.com/tibus29/thibaultpensec)
 [![thibaultpensec.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://thibaultpensec.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
