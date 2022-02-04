@@ -29,17 +29,25 @@ function Home() {
         return (
             // @ts-ignore
             <Layout title={prismicH.asText(home.data.title)} description={prismicH.asText(home.data.description)}>
-                <div className='intro'>
-                    {/*// @ts-ignore*/}
-                    <PrismicRichText field={home.data.title}/>
-                    {/*// @ts-ignore*/}
-                    <img src={home.data.image.url} alt={home.data.image.alt}/>
-                    {/*// @ts-ignore*/}
-                    <PrismicRichText field={home.data.description}/>
-                </div>
-                <div className='experiences'>
+                <section className='container text-center'>
+                    <div className='row py-lg-5'>
+                        <div className='col'>
+                            {/*// @ts-ignore*/}
+                            <PrismicRichText field={home.data.title} components={{
+                                heading1: ({ children }) => <h1 className="display-1">{children}</h1>
+                            }}/>
+                            {/*// @ts-ignore*/}
+                            <img src={home.data.image.url} alt={home.data.image.alt} className='rounded mb-3'/>
+                            {/*// @ts-ignore*/}
+                            <PrismicRichText field={home.data.description} components={{
+                                paragraph: ({ children }) => <p className="lead">{children}</p>,
+                            }}/>
+                        </div>
+                    </div>
+                </section>
+                <div className='container'>
                     {experiences?.results.map(((experience, index) => (
-                        <div key={index} className='experience'>
+                        <div key={index} className='row'>
                             <PrismicLink document={experience}>
                                 {/*// @ts-ignore*/}
                                 <PrismicRichText field={experience.data.title} />
@@ -50,6 +58,7 @@ function Home() {
                             {experience.data.current ? (<time>now</time>) : (<time>{experience.data.date_to}</time>) }
                             {/*// @ts-ignore*/}
                             <PrismicRichText field={experience.data.description} />
+                            <hr/>
                         </div>
                     )))}
                 </div>

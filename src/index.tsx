@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Routes, BrowserRouter, Route, Link } from 'react-router-dom';
 
-import './index.css';
+import './index.scss';
+
 import Home from './pages/Home';
 import NotFound from "./pages/NotFound";
 import {Experience} from "./pages/Experience";

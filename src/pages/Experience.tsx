@@ -27,17 +27,25 @@ export const Experience = () => {
         const title = prismicH.asText(experience.data.company) + ' / ' + prismicH.asText(experience.data.title);
         return (
             <Layout title={title}>
-                {/*// @ts-ignore*/}
-                <PrismicRichText field={experience.data.title} />
-                {/*// @ts-ignore*/}
-                <img src={experience.data.logo.url} alt={experience.data.logo.alt}/>
-                {/*// @ts-ignore*/}
-                <PrismicRichText field={experience.data.company} />
-                From: <time>{experience.data.date_from}</time><br/>
-                To: {experience.data.current ? (<time>now</time>) : (<time>{experience.data.date_to}</time>) }
-                {/*// @ts-ignore*/}
-                <PrismicRichText field={experience.data.description} />
-                <PrismicLink href='/'>Home</PrismicLink>
+                <div className='container'>
+                    <div className='row'>
+                        <div className="col">
+                            {/*// @ts-ignore*/}
+                            <img src={experience.data.logo.url} alt={experience.data.logo.alt}/>
+                            {/*// @ts-ignore*/}
+                            <PrismicRichText field={experience.data.title} />
+                            {/*// @ts-ignore*/}
+                            <PrismicRichText field={experience.data.company} />
+                            <div className="fw-light">
+                                From: <time>{experience.data.date_from}</time><br/>
+                                To: {experience.data.current ? (<time>now</time>) : (<time>{experience.data.date_to}</time>) }
+                            </div>
+                            {/*// @ts-ignore*/}
+                            <PrismicRichText field={experience.data.description} />
+                            <PrismicLink href='/'>Home</PrismicLink>
+                        </div>
+                    </div>
+                </div>
             </Layout>
         )
     }
