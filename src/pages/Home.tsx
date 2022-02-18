@@ -25,9 +25,16 @@ type CompanySliceProps = prismicT.Slice<
 
 const CompanySlice = ({ slice }: SliceComponentProps<CompanySliceProps>) => {
     return (
-        <section>
-            {/*<h3>{slice.primary.logo}</h3>*/}
-            <h3>{slice.primary.name}</h3>
+        <section className='card-group mb-5'>
+            {slice.items.map(((company, index) => (
+                    <div key={index} className="card border-0 mx-auto">
+                        {/*@ts-ignore*/}
+                        <img src={company.logo?.url} alt={company.logo?.alt} className='card-img-top mx-auto' style={{width: company.logo.dimensions.width, height: company.logo.dimensions.height}}/>
+                            <h6 className="card-subtitle text-muted text-center mt-2">
+                                <PrismicText field={company.name as prismicT.RichTextField}/>
+                            </h6>
+                    </div>
+            )))}
         </section>
     );
 };
