@@ -17,11 +17,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Node 20
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
       - name: Install modules
         run: npm install
 
