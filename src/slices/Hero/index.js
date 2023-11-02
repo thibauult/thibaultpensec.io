@@ -39,6 +39,7 @@ const Hero = ({ slice }) => {
             <PrismicNextLink
               field={slice.primary.buttonLink}
               className="rounded bg-white px-5 py-3 font-medium text-slate-800"
+              target='_blank'
             >
               {slice.primary.buttonText || "Learn More"}
             </PrismicNextLink>

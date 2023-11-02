@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react';
 
 import { Inter } from "next/font/google";
 import { PrismicText } from "@prismicio/react";
@@ -25,6 +26,7 @@ export default async function RootLayout({ children }) {
         <Header />
         {children}
         <PrismicPreview repositoryName={repositoryName} />
+        <Analytics />
       </body>
     </html>
   );
