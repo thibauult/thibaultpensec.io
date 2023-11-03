@@ -104,8 +104,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
    * Meta Title field in *Page*
    *
    * - **Field Type**: Text
@@ -259,6 +258,61 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *IconList → Items*
+ */
+export interface IconListSliceDefaultItem {
+  /**
+   * icon field in *IconList → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_list.items[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * link field in *IconList → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_list.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Default variation for IconList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IconListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<IconListSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *IconList*
+ */
+type IconListSliceVariation = IconListSliceDefault;
+
+/**
+ * IconList Shared Slice
+ *
+ * - **API ID**: `icon_list`
+ * - **Description**: IconList
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IconListSlice = prismic.SharedSlice<
+  "icon_list",
+  IconListSliceVariation
+>;
 
 /**
  * Primary content in *Image → Primary*
@@ -661,7 +715,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -669,29 +723,45 @@ declare module "@prismicio/client" {
     export type {
       NavigationDocument,
       NavigationDocumentData,
+      NavigationDocumentDataLinksItem,
       PageDocument,
       PageDocumentData,
+      PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
       HeroSlice,
+      HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      IconListSlice,
+      IconListSliceDefaultItem,
+      IconListSliceVariation,
+      IconListSliceDefault,
       ImageSlice,
+      ImageSliceDefaultPrimary,
+      ImageSliceBannerPrimary,
       ImageSliceVariation,
       ImageSliceDefault,
       ImageSliceBanner,
       ImageCardsSlice,
+      ImageCardsSliceDefaultPrimary,
+      ImageCardsSliceDefaultItem,
       ImageCardsSliceVariation,
       ImageCardsSliceDefault,
       QuoteSlice,
+      QuoteSliceDefaultPrimary,
       QuoteSliceVariation,
       QuoteSliceDefault,
       TextSlice,
+      TextSliceDefaultPrimary,
+      TextSliceTwoColumnsPrimary,
       TextSliceVariation,
       TextSliceDefault,
       TextSliceTwoColumns,
       TextWithImageSlice,
+      TextWithImageSliceDefaultPrimary,
+      TextWithImageSliceWithButtonPrimary,
       TextWithImageSliceVariation,
       TextWithImageSliceDefault,
       TextWithImageSliceWithButton,
