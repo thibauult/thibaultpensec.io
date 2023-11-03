@@ -1,0 +1,133 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icon",
+						{
+							"origin": {
+								"id": "9Zjd7PE_FRM",
+								"url": "https://images.unsplash.com/photo-1611944212129-29977ae1398c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxMaW5rZWRJbnxlbnwwfHx8fDE2OTkwMjgzMTd8MA&ixlib=rb-4.0.3&q=85",
+								"width": 3200,
+								"height": 2400
+							},
+							"url": "https://images.unsplash.com/photo-1611944212129-29977ae1398c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxMaW5rZWRJbnxlbnwwfHx8fDE2OTkwMjgzMTd8MA&ixlib=rb-4.0.3&q=85&rect=400%2C0%2C2400%2C2400&w=64&h=64",
+							"width": 64,
+							"height": 64,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 400,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://www.linkedin.com",
+								"target": "_blank"
+							}
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icon",
+						{
+							"url": "https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxHaXRodWJ8ZW58MHx8fHwxNjk5MDI4MzM3fDA&ixlib=rb-4.0.3&q=85&rect=813%2C0%2C3599%2C3599&w=64&h=64",
+							"origin": {
+								"id": "UT8LMo-wlyk",
+								"url": "https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxHaXRodWJ8ZW58MHx8fHwxNjk5MDI4MzM3fDA&ixlib=rb-4.0.3&q=85",
+								"width": 5225,
+								"height": 3599
+							},
+							"width": 64,
+							"height": 64,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 813,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://github.com/",
+								"target": "_blank"
+							}
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icon",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1611605698335-8b1569810432?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHx0d2l0dGVyfGVufDB8fHx8MTY5OTAyOTE5OHww&ixlib=rb-4.0.3&q=85&rect=400%2C0%2C2400%2C2400&w=64&h=64",
+							"origin": {
+								"id": "k1xf2D7jWUs",
+								"url": "https://images.unsplash.com/photo-1611605698335-8b1569810432?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHx0d2l0dGVyfGVufDB8fHx8MTY5OTAyOTE5OHww&ixlib=rb-4.0.3&q=85",
+								"width": 3200,
+								"height": 2400
+							},
+							"width": 64,
+							"height": 64,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 400,
+									"y": 0
+								}
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com",
+								"target": "_blank"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
+]
