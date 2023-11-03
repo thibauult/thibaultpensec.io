@@ -12,7 +12,7 @@ const IconList = ({ slice }) => {
 
         <ul className="flex flex-row place-content-center gap-8">
           {slice.items.map((item) => (
-              <li>
+              <li key={item.link.url}>
                   <PrismicNextLink field={item.link}>
                       <PrismicNextImage className="rounded" field={item.icon} />
                   </PrismicNextLink>
