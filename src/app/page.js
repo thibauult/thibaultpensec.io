@@ -14,6 +14,9 @@ export async function generateMetadata() {
   return {
     title: page.data.title,
     description: page.data.meta_description,
+    icons: {
+      icon: [{ url: 'https://openmoji.org/data/color/svg/2328.svg' }]
+    },
     openGraph: {
       title: page.data.meta_title,
       images: [

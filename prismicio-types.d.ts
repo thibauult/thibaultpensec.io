@@ -371,9 +371,40 @@ export type ImageSliceBanner = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Image → Primary*
+ */
+export interface ImageSliceBlurPrimary {
+  /**
+   * Image field in *Image → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Blur variation for Image Slice
+ *
+ * - **API ID**: `blur`
+ * - **Description**: Image
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageSliceBlur = prismic.SharedSliceVariation<
+  "blur",
+  Simplify<ImageSliceBlurPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Image*
  */
-type ImageSliceVariation = ImageSliceDefault | ImageSliceBanner;
+type ImageSliceVariation =
+  | ImageSliceDefault
+  | ImageSliceBanner
+  | ImageSliceBlur;
 
 /**
  * Image Shared Slice
@@ -741,9 +772,11 @@ declare module "@prismicio/client" {
       ImageSlice,
       ImageSliceDefaultPrimary,
       ImageSliceBannerPrimary,
+      ImageSliceBlurPrimary,
       ImageSliceVariation,
       ImageSliceDefault,
       ImageSliceBanner,
+      ImageSliceBlur,
       ImageCardsSlice,
       ImageCardsSliceDefaultPrimary,
       ImageCardsSliceDefaultItem,
